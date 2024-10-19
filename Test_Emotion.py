@@ -16,7 +16,7 @@ emotion_model.load_weights("model/emotion_model1.weights.h5")
 print("Loaded model from disk")
 
 # start the webcam feed
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture('path')
 
 # pass here your video path
 # you may download one from here : https://www.pexels.com/video/three-girls-laughing-5273028/
@@ -28,7 +28,7 @@ while True:
     frame = cv2.resize(frame, (1280, 720))
     if not ret:
         break
-    face_detector = cv2.CascadeClassifier('haarcascades\\haarcascade_frontalface_default.xml')
+    face_detector = cv2.CascadeClassifier('haarcascades\haarcascade_frontalface_default.xml')
     gray_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
     # detect faces available on camera
