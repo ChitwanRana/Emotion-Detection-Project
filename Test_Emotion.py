@@ -1,6 +1,6 @@
 import numpy
 import cv2
-from tensorflow.keras.models import model_from_json
+from tensorflow.keras.models import model_from_json # type: ignore
 
 
 emotion_dict={0:'Angry',1:'Disgusted',2:'Fear',3:'Happy',4:'Neutral',5:'Sad',6:'Surprised'}
